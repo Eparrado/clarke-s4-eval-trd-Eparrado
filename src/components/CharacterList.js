@@ -5,7 +5,7 @@ class CharacterList extends Component {
 
   render() {
     const filterList = this.props.characterData.filter((characterItem) => {
-        return characterItem.name.toLowerCase().includes(this.props.filter);
+        return characterItem.name.toLowerCase().includes(this.props.filter.toLowerCase());
       });
 
     return (

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SearchInput from './components/SearchInput';
 import CharacterList from './components/CharacterList';
 
 const API = 'http://hp-api.herokuapp.com/api/characters';
@@ -36,7 +35,7 @@ class App extends Component {
     return (
     <div className="App">
     <h1>My Harry Potter Character List</h1>
-    <SearchInput handleChange = {this.handleChange} filter={this.state.filter} />
+    <input type="text" name="buscar" onChange = {this.handleChange} value = {this.state.filter} placeholder="Introduce un nombre para buscar"/>
     <CharacterList characterData = {characterStore} filter={this.state.filter}/>
     </div>
   );

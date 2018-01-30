@@ -6,7 +6,7 @@ class ItemList extends Component {
       <li>
         <h2>{ this.props.name }</h2>
         <img src={ this.props.image } alt={ `Foto de ${this.props.name}` }/>
-        <p>{ this.props.house }</p>
+        <img src={ `Images/${ this.props.house }.jpg` }/>
         <p>{ this.props.alive ? 'Vivo' : 'Muerto' }</p>
       </li>
     );

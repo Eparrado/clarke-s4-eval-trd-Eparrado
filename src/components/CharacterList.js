@@ -1,40 +1,24 @@
 import React, { Component } from 'react';
 import ItemList from './ItemList'
 
-const API = 'http://hp-api.herokuapp.com/api/characters';
 class CharacterList extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      CharacterStore : []
-    }
-    this.componentDidMount = this.componentDidMount.bind(this);
-  }
-
-  componentDidMount () {
-    fetch(API)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          CharacterStore : data
-        });
-      });
-  }
-
   render() {
-    const CharacterStore = this.state.CharacterStore;
+    const filterList = this.props.characterData.filter((characterItem) => {
+        return characterItem.name.toLowerCase().includes(this.props.filter);
+      });
+
     return (
       <section>
 
-        <ul className="content-list"> {
-          CharacterStore.map((CharacterItem,index) =>
+        <ul className="content-list">
+        {filterList.map((characterItem,index) =>
             <ItemList
             key = {index}
-            name = { CharacterItem.name }
-            image = { CharacterItem.image }
-            house = { CharacterItem.house }
-            alive = { CharacterItem.alive }
+            name = { characterItem.name }
+            image = { characterItem.image }
+            house = { characterItem.house }
+            alive = { characterItem.alive }
             />
           )}
         </ul>

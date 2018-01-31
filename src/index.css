@@ -1,0 +1,58 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+  background-image: url("Images/page-background.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+
+h1 {
+  color: white; }
+
+h2 {
+  margin-bottom: 5px; }
+
+h3, p {
+  margin-top: 0; }
+
+.input-style {
+  border: none;
+  background: none;
+  color: white;
+  border-bottom: 1px solid white;
+  width: 70%;
+  font-family: 'Special Elite', cursive;
+  text-align: center; }
+
+.container-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media all and (min-width: 768px) {
+    .container-list {
+      grid-template-columns: 1fr 1fr; } }
+  @media all and (min-width: 1024px) {
+    .container-list {
+      grid-template-columns: 1fr 1fr 1fr; } }
+
+.items-list {
+  border: 2px solid black;
+  background-color: white;
+  margin: 20px;
+  padding: 15px;
+  position: relative; }
+
+.character-photo {
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  border-radius: 50%; }
+
+.house-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; }

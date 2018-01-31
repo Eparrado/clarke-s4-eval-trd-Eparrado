@@ -34,8 +34,9 @@ class App extends Component {
 
     return (
     <div className="App">
-    <h1>My Harry Potter Character List</h1>
-    <input type="text" name="buscar" onChange = {this.handleChange} value = {this.state.filter} placeholder="Introduce un nombre para buscar"/>
+    <img className="header-logo" src="Images/header-logo.png" alt="logo Harry Potter" />
+    <h1>Buscador de personajes</h1>
+    <input className="input-style" type="text" name="buscar" onChange = {this.handleChange} value = {this.state.filter} placeholder="Introduce un nombre para buscar"/>
     <CharacterList characterData = {characterStore} filter={this.state.filter}/>
     </div>
   );

@@ -11,11 +11,12 @@ class CharacterList extends Component {
     return (
       <section>
 
-        <ul className="content-list">
+        <ul className="container-list">
         {filterList.map((characterItem,index) =>
             <ItemList
             key = {index}
             name = { characterItem.name }
+            birth = { characterItem.dateOfBirth }
             image = { characterItem.image }
             house = { characterItem.house }
             alive = { characterItem.alive }

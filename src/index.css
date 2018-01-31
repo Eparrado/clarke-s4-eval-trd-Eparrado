@@ -2,7 +2,7 @@ body {
   box-sizing: border-box;
   font-family: 'Special Elite', cursive;
   text-align: center;
-  background-image: url("Images/page-background.jpg");
+  background-image: url("/Images/page-background.jpg");
   background-size: cover;
   background-attachment: fixed; }
 
@@ -31,7 +31,8 @@ h2 {
   margin-bottom: 5px; }
 
 h3, p {
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 5px; }
 
 .input-style {
   border: none;
@@ -43,8 +44,8 @@ h3, p {
   text-align: center; }
 
 .container-list {
-  list-style: none;
-  padding-left: 0;
+  padding: 0;
+  list-style-type: none;
   display: grid;
   grid-template-columns: 1fr; }
   @media all and (min-width: 768px) {
@@ -55,13 +56,13 @@ h3, p {
       grid-template-columns: 1fr 1fr 1fr; } }
 
 .items-list {
-  background-color: #012532;
   color: white;
-  margin: 20px;
+  margin: 20px auto;
   padding: 15px;
   position: relative;
   border-radius: 30px;
-  box-shadow: 0.5px 0.5px 14px #fff; }
+  box-shadow: 0.5px 0.5px 14px #fff;
+  width: 70%; }
 
 .character-photo {
   height: 200px;
@@ -80,3 +81,17 @@ h3, p {
   opacity: 0.7;
   image-orientation: 6.4deg;
   width: 30%; }
+
+.heart-full {
+  animation-duration: 2s;
+  animation-name: beat;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+@keyframes beat {
+  0% {
+    transform: scale(0.5); }
+  50% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(0.5); } }

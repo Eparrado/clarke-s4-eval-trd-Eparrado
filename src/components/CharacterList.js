@@ -10,7 +10,7 @@ class CharacterList extends Component {
 
     return (
       <section>
-        <p>Se han encontrado {filterList.length} de {this.props.characterData.length} personajes</p>
+        <p className="info-result">Se han encontrado {filterList.length} de {this.props.characterData.length} personajes</p>
 
         <ul className="container-list">
         {filterList.map((characterItem,index) =>

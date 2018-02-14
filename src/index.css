@@ -4,7 +4,8 @@ body {
   text-align: center;
   background-image: url("/Images/page-background.jpg");
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  color: white; }
 
 .hero {
   height: 100vh;

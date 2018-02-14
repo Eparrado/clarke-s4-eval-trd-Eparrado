@@ -10,16 +10,13 @@ class CharacterList extends Component {
 
     return (
       <section>
+        <p>Se han encontrado {filterList.length} de {this.props.characterData.length} personajes</p>
 
         <ul className="container-list">
         {filterList.map((characterItem,index) =>
             <ItemList
             key = {index}
-            name = { characterItem.name }
-            birth = { characterItem.dateOfBirth }
-            image = { characterItem.image }
-            house = { characterItem.house }
-            alive = { characterItem.alive }
+            {...characterItem}
             />
           )}
         </ul>

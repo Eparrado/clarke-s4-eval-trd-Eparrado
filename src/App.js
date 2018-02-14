@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import CharacterList from './components/CharacterList';
+import SearchInput from './components/SearchInput';
 
-const API = 'http://hp-api.herokuapp.com/api/characters';
+const API = 'https://hp-api.herokuapp.com/api/characters';
 class App extends Component {
 
     constructor(props) {
@@ -10,7 +11,6 @@ class App extends Component {
         characterStore : [],
         filter : ''
       }
-      this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount () {
@@ -30,7 +30,7 @@ class App extends Component {
     }
 
   render() {
-    const characterStore = this.state.characterStore;
+    const {characterStore, filter} = this.state;
 
     return (
     <div className="App">
@@ -38,8 +38,8 @@ class App extends Component {
     <img className="header-logo" src="Images/header-logo.png" alt="logo Harry Potter" />
     <h1>Buscador de personajes</h1>
     </section>
-    <input className="input-style" type="text" name="buscar" onChange = {this.handleChange} value = {this.state.filter} placeholder="Introduce un nombre para buscar"/>
-    <CharacterList characterData = {characterStore} filter={this.state.filter}/>
+    <SearchInput handleChange={this.handleChange} filter={filter}/>
+    <CharacterList characterData = {characterStore} filter={filter}/>
     </div>
   );
   }

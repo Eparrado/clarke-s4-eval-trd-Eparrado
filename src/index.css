@@ -99,7 +99,3 @@ h3, p {
     transform: scale(1); }
   100% {
     transform: scale(0.8); } }
-
-.info-result {
-  margin-top: 10px;
-}
